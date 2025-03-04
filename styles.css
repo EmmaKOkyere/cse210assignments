@@ -7,7 +7,8 @@ body {
 }
 
 p {
-    margin-left: 400px;
+    padding: 5px;
+    align-content: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: larger;
 }
