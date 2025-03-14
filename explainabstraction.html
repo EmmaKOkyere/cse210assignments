@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain Abstraction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>What is abstraction and why is it important?</h1>
+    </div>
+    <p>
+        The fundamental concept in computer science and programming that invloves simplifying complex systems by focusing on the essential characteristics while hiding unnecessary details is defined as abstraction.
+        Abstraction enables developers to create models that in the real world depicts entities that avoids complex details. Therefore it improves maintainability and as well as clarity in the code. When we talk about the benefits
+        of Abstraction, it is very crucial in the programming world. Why? This is because it makes code easier to be fixed and updated. When the complex parts in abstract classes or interfaces are hided, developers are able to modify and make 
+        changes to how things work inside without impacting other parts of the program that has a dependability on it. So this clear separation between the interface and the implementation reduces risk in the code, allowing updates and enhancement. 
+    </p>
+    <p>
+        I will share an application of abstraction in my program below during this week. In my journal program,I applied effectively abstraction in the Entry class. It represents a journal entry with attributes like the Prompt, Response, and Date. Those who sue the Entry class do not need to figure out the details of how the "ToFileString" method works internally.
+        However, they just need to understand that by calling the "entry.ToFileString()", will give a formatted string suitable to file output.     
+    </p>
+    <p class="myprogram">
+        public class Entry : NewBaseType  
+        {  
+            public string Prompt { get; }  
+            public string Response { get; }  
+            public DateTime Date { get; }  
+        
+            public Entry(string prompt, string response, DateTime date)  
+            {  
+                Prompt = prompt;  
+                Response = response;  
+                Date = date;  
+            }  
+        
+            public override string ToString()  
+            {  
+                return $"{Date.ToString("g")}: {Prompt}\n{Response}\n";  
+            }  
+        
+            public string ToFileString()  
+            {  
+                return $"{Date.ToString("o")}|{Prompt}|{Response}";  
+            }  
+        }  <br>
+    </p>
+    <p>
+        From my code, observe how the details of how an "Entry" is converted to a string and are abstracted way in the "ToFileString()". This design allows the rest of the program to call this method directly, without the need to understand how the formatting is executed.
+    </p>
+
+    <p>
+        In summary, abstraction is beneficial and plays a vital role in the software development world. This simplifies complex systems, improves code and it gives a clear interfaces for users. The 
+        Entry class in my program illustrates the use of abstraction to effectively handle complexity while ensuring ease of use.
+    </p>
+
+</body>
+
+</html>
