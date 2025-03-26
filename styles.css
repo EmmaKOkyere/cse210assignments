@@ -19,3 +19,8 @@ p {
     font-style: italic;
     align-items: center;
 }
+
+.align {
+    text-align: center;
+    display: block;
+}
