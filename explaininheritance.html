@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain Version Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>What is inheritance and why is it important?</h1>
+    </div>
+    <p>
+        Inheritance is a fundamental concept in object-oriented programming that allows a new class to inherit properties
+        and behaviors from an existing class. This principle promotes code reusability and a establishes a natural hierarchy
+        between classes, which can reduce redundancy and improve maintainability.
+    </p>
+    <p>
+        One major benefit of inheritance is that it allows for polymorphism. This means that, a simgle function can operate on different
+        classes through a common interface, enabling more flexible and dynamic code. For example, if you have a base class called <i>Shape,</i>
+        you can create subclasses like <i>Circle</i> and <i>Rectangle,</i> each with its own methods to calculate area while still being
+        able to use a common method to display the shape.
+    </p>
+    <p>
+        An application of inheritance is applied through my code from the Activity base class. Which provides common mthods for all derived
+        classes like <i>BreathingActivity, listingActivity, and ReflectionActivity.</i> This structure promotes code reusability and allows for easy
+        expansion. Each derived class can implement its specific behavior while sharing common functionality, making the application organized and maintainable.
+    </p>
+    <p>
+        <i>class Program
+            {
+                static void Main(string[] args)
+                {
+                    Activity activity = null;
+            
+                    Console.WriteLine("Welcome to the Mindfulness App!");
+                    Console.WriteLine("Select an activity:");
+                    Console.WriteLine("1. Breathing Activity");
+                    Console.WriteLine("2. Reflection Activity");
+                    Console.WriteLine("3. Listing Activity");
+                    Console.WriteLine("4. Meditation Activity"); // New option
+            
+                    string choice = Console.ReadLine();
+                    switch (choice)
+                    {
+                        case "1":
+                            activity = new BreathingActivity();
+                            break;
+                        case "2":
+                            activity = new ReflectionActivity();
+                            break;
+                        case "3":
+                            activity = new ListingActivity();
+                            break;
+                        case "4":
+                            activity = new MeditationActivity(); // Handle new activity
+                            break;
+                        default:
+                            Console.WriteLine("Invalid choice.");
+                            return;
+                    }
+            
+                    activity.Execute();
+                }
+            }</i>
+    </p>
+    <p>
+        My code implements a mindfulness app that offers different activities for relaxation and reflection.
+        Through inheritance, the Activity base class provides shared methods for starting and ending activities, 
+        while subclasses like BreathingActivity, ListingActivity, and ReflectionActivity define their unique behaviors. 
+        This structure allows users to select an activity and engage with it, promoting code reusability and simplifying future expansions.
+    </p>
+    <p>
+        In summary, inheritance is a powerful tool in OOP that enhances code efficiency and fosters a logical structure, making it
+         easier to manage and expand applications.
+    </p>
+
+</body>
+
+</html>
