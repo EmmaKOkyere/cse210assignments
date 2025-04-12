@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain programming with classes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Explain Progamming with Classes?</h1>
+    </div>
+
+    <div>
+        <H1>Abstraction</H1>
+    <p>
+        <em>Abstraction</em> is the principle of hiding complex details and showing only the essential features of an object.
+        It lets programmers interact with objects through a simplified interface, making systems easier to understand and use.
+    </p>
+     <p>
+        <em>In my journal program,</em> I effectively applied abstraction in the Entry class, which represents a journal entry with attributes 
+        such as Prompt, Response, and Date. Users of the Entry class do not need to understand the internal workings of the ToFileString method. 
+        They only need to know that calling entry.ToFileString() will provide a formatted string suitable for file output.
+     </p>
+        <p>
+        <em>Using abstraction</em> in the Entry class enhances the program's flexibility for future changes. It encapsulates implementation details, 
+        allowing modifications to the ToFileString method without affecting users. This simplifies interactions, enabling users to focus on
+        functionality rather than complex implementation. Maintenance becomes easier, as changes can be made within the method without altering 
+        external code. Additionally, abstraction supports the creation of subclasses or extensions, promoting adaptability and ensuring the program remains efficient.
+       </p>
+    </div>
+
+    <div>
+        <H1>Encapsulation</H1>
+    <p>
+        <em>Encapsulation</em>is the practice of grouping data and the methods that manipulate that data into a single unit, usually a class. It limits direct access to 
+            certain components of an object, safeguarding its internal state from external changes.
+    </p>
+     <p>
+        <em>In my program,</em> I applied encapsulation by making fields like _name, _age, and _email private within a User class. This design prevents
+           direct access to these fields from outside the class, ensuring that the data remains secure. To provide controlled access, I implemented public methods such as GetUserInfo() 
+           and UpdateEmail(). This way, users can retrieve and modify the data safely without compromising the integrity of the internal state.
+     </p>
+        <p>
+        <em>Using encapsulation</em>  enhances the program's flexibility for future changes in several ways. First, it allows for changes to the internal implementation 
+           without affecting external code. For instance, if I decide to change how the user data is stored or validated, I can do so within the class without requiring
+           updates to the code that interacts with it. Additionally, this approach makes it easier to maintain and debug the program, as all data handling is centralized within the class methods.
+           Overall, encapsulation promotes adaptability and ensures that the program can evolve while maintaining data integrity.
+       </p>
+    </div>
+
+    <div>
+        <H1>Inheritance</H1>
+    <p>
+        <em>Inheritance </em>is a mechanism that enables one class (the subclass) to inherit the attributes and methods of another class (the superclass). 
+            This fosters code reuse and creates a hierarchical relationship between classes.
+    </p>
+     <p>
+        <em>In my mindfulness app,</em> I utilized inheritance by creating a base class called Activity that includes shared methods for 
+            starting and ending activities. Subclasses such as BreathingActivity, ListingActivity, and ReflectionActivity each implement their unique behaviors
+            while inheriting the foundational features from the Activity class. This design allows users to easily select and engage with various activities.
+     </p>
+        <p>
+        <em>Using inheritance</em> enhances the program's flexibility for future changes in several ways. It promotes code reusability, as common functionalities 
+            are centralized in the Activity class, minimizing redundancy. If I need to introduce a new activity type, I can simply create a new subclass that inherits 
+            from Activity, ensuring consistency while adding new features. This structure makes it easier to maintain and expand the app, allowing for seamless integration 
+            of additional activities without disrupting existing code.
+       </p>
+    </div>
+
+    <div>
+        <H1>polymorphism</H1>
+    <p>
+        <em>Polymorphism</em> is the ability to treat different classes as if they are instances of the same class using a common interface. This means that methods 
+            can be called on objects of various types, with each object executing its own version of the method.
+    </p>
+     <p>
+        <em>In my EternalQuest program,</em> I applied polymorphism by managing various goal types—SimpleGoal, EternalGoal, and ChecklistGoal—as instances of a common
+            Goal type. This design allows methods like RecordEvent(), DisplayGoal(), and GetPoints() to be called on any goal without needing to specify the exact type. 
+            When achievements are recorded, the correct method for each subclass is automatically invoked, updating their progress accordingly.
+     </p>
+        <p>
+        <em>Using polymorphism </em>enhances the program's flexibility for future changes by simplifying code management. Since all goal types 
+            share a common interface, I can easily add new goal types without modifying existing code. This approach also makes it easier to maintain and extend the 
+            functionality of the program, as new goals can be integrated seamlessly while adhering to the established structure.
+       </p>
+    </div>
+
+    <p>
+        In summary, using the four principles of Programming with Classes—abstraction, encapsulation, inheritance, and polymorphism, I built a more organized, maintainable,
+        and flexible codebase for my projects. Each principle helps the program evolve while reducing the chances of errors.
+    </p>
+
+</body>
+
+</html>
