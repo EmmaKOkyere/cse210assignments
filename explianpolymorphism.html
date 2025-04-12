@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explain polymorphism</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>What is polymorphism and why is it important?</h1>
+    </div>
+    <p>
+        Polymorphism is a core principle of object-oriented programming (OOP) that enables methods to behave differently
+        depending on the object they are working with, even if those methods share the same name.The term comes from the
+        Greek words "poly," meaning "many," and "morph," meaning "forms." Essentially, this allows a single interface to
+        represent various underlying data types, often achieved through method overriding or method overloading.
+    </p>
+    <p>
+        As we consider polymorphism important in the programming world, One of the key advantages of polymorphism is
+        that
+        it boosts flexibility and maintainability in code. Because polymorphic functions can work with objects from
+        various
+        classes, developers can create more generic and reusable code. This feature helps minimize redundancy and
+        simplifies
+        the process of adding new functionalities without needing to modify existing code.
+    </p>
+    <p>
+        Polymorphism is widely utilized in frameworks and libraries, enabling developers to scale applications
+        effectively.
+        For example, in a GUI framework, you might have a draw() method that is overridden by different shapes such as
+        Circle,
+        Square, and Triangle. Each shape can implement its own drawing logic, yet they can all be managed through the
+        same interface.
+    </p>
+    <p class="myprogram">
+        using System;
+        using System.Collections.Generic;
+
+        namespace EternalQuest
+        {
+        // Main program class to manage goals
+        class Program
+        {
+        static void Main(string[] args)
+        {
+        List<Goal> goals = new List<Goal>
+                {
+                new SimpleGoal("Run a marathon"),
+                new EternalGoal("Read scriptures"),
+                new ChecklistGoal("Attend the temple", 10)
+                };
+
+                // Simulating goal achievements
+                goals[0].RecordEvent(); // Complete Simple Goal
+                goals[1].RecordEvent(); // Record for Eternal Goal
+                goals[2].RecordEvent(); // Record for Checklist Goal
+                goals[2].RecordEvent(); // Record again for Checklist Goal
+
+                // Displaying all goals and their status
+                Console.WriteLine("\nCurrent Goals and Points:");
+                foreach (var goal in goals)
+                {
+                goal.DisplayGoal();
+                }
+
+                // Final Checkpoint
+                Console.WriteLine("\nTotal Points:");
+                int totalPoints = 0;
+                foreach (var goal in goals)
+                {
+                totalPoints += goal.GetPoints();
+                }
+                Console.WriteLine($"Total Points Earned: {totalPoints}");
+                }
+                }
+                }
+    </p>
+    <p>
+        In my code, The **EternalQuest** program demonstrates polymorphism by managing different types of
+        goals—`SimpleGoal`,
+        `EternalGoal`, and `ChecklistGoal`—as `Goal` types. This allows methods like `RecordEvent()`, `DisplayGoal()`,
+        and
+        `GetPoints()` to be called without knowing the specific goal type. When achievements are recorded, the
+        appropriate
+        method for each subclass is invoked, updating their progress. This approach simplifies code management and
+        allows
+        for easy addition of new goal types in the future.
+    </p>
+
+    <p>
+        In summary, polymorphism in C# is essential for building flexible and adaptable applications, allowing
+        developers
+        to write code that works smoothly with different data types.
+    </p>
+
+</body>
+
+</html>
